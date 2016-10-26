@@ -1,0 +1,5 @@
+echo "Hello, who am I talking to? "
+
+read myname
+
+echo "Hi, $myname"

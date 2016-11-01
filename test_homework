@@ -1,5 +1,5 @@
 echo "What is the date and time"
 
-read currenttime
+read date
 
-echo $currenttime
+echo $date

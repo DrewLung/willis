@@ -13,6 +13,9 @@
 #done
 
 #!/bin/bash
+date=$1
+file_op=$2
+
 read -p "How many days of samples: "               days
 read -p "N) New sample or A) Append to previous: " file_op
 

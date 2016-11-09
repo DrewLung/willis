@@ -19,7 +19,7 @@ file_op=$2
 read -p "How many days of samples: "               days
 read -p "N) New sample or A) Append to previous: " file_op
 
-if [ "$file_op" == "N" ]; then rm -f tmp; fi
+if [ "$file_op" == "N" ]; then rm -f ~/tmp/weather_data.csv; fi
 read samples <<< $(($days*24))
 read weatherapi_key <<< $(cat weatherapi_key)
 

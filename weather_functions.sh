@@ -2,7 +2,7 @@
 declare -a temp_array
 
 function average {
-  echo "$sum/${temp_array[@]}" | bc 
+  echo "$sum/${temp_array[*]}" | bc 
 }
 
 for temp in $(cat ~/tmp/weather_data.csv | awk -F',' '{ print $2 }'); do 
@@ -15,4 +15,4 @@ for temp in $(seq 0 $samples); do
   sum=$(echo "$sum + ${temp_array[$temp]}"|bc)
 done
 
-echo $average
+echo $sum

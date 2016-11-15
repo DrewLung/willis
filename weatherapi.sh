@@ -16,8 +16,8 @@
 days=$1
 file_op=$2
 
-#read -p "How many days of samples: "               days
-#read -p "N) New sample or A) Append to previous: " file_op
+read -p "How many days of samples: "               days
+read -p "N) New sample or A) Append to previous: " file_op
 
 if [ "$file_op" == "N" ]; then rm -f ~/tmp/weather_data.csv; fi
 read samples <<< $(($days*24))
@@ -37,7 +37,7 @@ for i in $(seq 1 $samples); do
     echo "$(date +'%m/%d/%Y %H:%M') bad sample"
   fi
 
-  sleep 15
+  sleep 1800
 done
 
 #read date temp humidity <<< $(cat weather.json  | jq '.dt,.main.temp,.main.humidity')

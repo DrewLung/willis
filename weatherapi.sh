@@ -37,7 +37,7 @@ for i in $(seq 1 $samples); do
     echo "$(date +'%m/%d/%Y %H:%M') bad sample"
   fi
 
-  sleep 1800
+  sleep 3600
 done
 
 #read date temp humidity <<< $(cat weather.json  | jq '.dt,.main.temp,.main.humidity')

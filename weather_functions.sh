@@ -1,10 +1,20 @@
 #the following will sum all the values of the temp_array and put them in a variable called 'sum'
-declare -a temp_array
 
 function average {
-  echo "$sum/${#temp_array[*]}" | bc 
+  echo average=$(echo "scale=1 ; $sum/${#temp_array[*]}" | bc) 
 }
 
+function round {
+  printf "%.*f\n" 0 $1
+}
+
+function maxmin {
+ 
+  max=$(round ${temp_array[0]})
+  min=$max
+}
+
+declare -a temp_array
 for temp in $(cat ~/tmp/weather_data.csv | awk -F',' '{ print $2 }'); do 
   temp_array=("${temp_array[@]}" $temp)
 done

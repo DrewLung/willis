@@ -32,7 +32,7 @@ for i in $(seq 1 $samples); do
   if [ $epoch -gt 1477570797 ]; then
     read datetime <<<$(date -d @$epoch +'%m/%d/%Y %H:%M')
     echo "$datetime temp=$temp humidity=$humidity"
-    echo $datetime,$temp,$humidity >> ~/tmp/weather_date.csv
+    echo $datetime,$temp,$humidity >> ~/tmp/weather_data.csv
   else 
     echo "$(date +'%m/%d/%Y %H:%M') bad sample"
   fi

@@ -1,7 +1,7 @@
 #the following will sum all the values of the temp_array and put them in a variable called 'sum'
 
 function average {
-  echo average=$(echo "scale=1 ; $sum/${#temp_array[*]}" | bc) 
+  echo average=$(echo "scale=0 ; $sum/${#temp_array[*]}" | bc) 
 }
 
 function round {
@@ -9,10 +9,17 @@ function round {
 }
 
 function maxmin {
-  #max=$(round ${temp_array[0]})
+  #max=${temp_array[0]}
+#for n in "${temp_array[@]}" ; do
+    #((n > max)) && max=$n
+#done
+#echo $max
+  max=$(round ${temp_array[0]})
   max=${temp_array[@]}
   for n in "${temp_array[@]}" ; do
-      ((n > max)) && max=$n | bc
+      if [ "$n" -gt "$max" ] ; then
+          max="$n"
+      fi
   done
 echo $max
   #min=$max
@@ -32,3 +39,5 @@ done
 echo $sum
 
 average
+
+maxmin

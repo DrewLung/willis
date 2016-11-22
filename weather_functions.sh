@@ -9,20 +9,20 @@ function round {
 }
 
 function maxmin {
-  #max=${temp_array[0]}
-#for n in "${temp_array[@]}" ; do
-    #((n > max)) && max=$n
-#done
-#echo $max
   max=$(round ${temp_array[0]})
-  max=${temp_array[@]}
+  min=$(round ${temp_array[0]})
   for n in "${temp_array[@]}" ; do
-      if [ "$n" -gt "$max" ] ; then
-          max="$n"
+      if [ $(round $n) -gt $(round $max) ] ; then
+          max=$n
       fi
   done
-echo $max
-  #min=$max
+  for i in "${temp_array[@]}" ; do
+      if [ $(round $i) -lt $(round $min) ] ; then
+          min=$i
+      fi
+  done
+echo min=$min
+echo max=$max
 }
 
 declare -a temp_array

@@ -12,3 +12,17 @@ else echo "This number is greater than 5" ;
 fi
 done
 
+#function time {
+  #time=$1
+  #for n in $time ; do
+  #if [ $n -lt 5 ] && [ $n -gt 0 ] ; then echo "This number is less than 5 but greater then zero" ;
+  #elif [ $n -eq 5 ] ; then echo "This is the number 5" ;
+  #elif [ $n = 0 ] ; then echo "This is the number zero" ;
+  #else echo "This number is greater than 5" ;
+  #fi
+  #done
+#}
+
+#read -p "What number are you putting in? " time
+
+#time

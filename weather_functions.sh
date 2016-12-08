@@ -36,6 +36,7 @@ for temp in $(seq 0 $samples); do
   sum=$(echo "$sum + ${temp_array[$temp]}"|bc)
 done
 
+echo " Computer Programming Fundamentals "
 echo $sum
 echo "first date = $(head -n 1 ~/tmp/weather_data.csv | awk -F',' '{ print $1 }')"
 echo "last date = $(tail -n 1 ~/tmp/weather_data.csv | awk -F',' '{ print $1 }')"

@@ -31,4 +31,4 @@ read -p "enter variable d: " d
 
 echo $a $b $c $d
 
-myfunc
+

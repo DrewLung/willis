@@ -1,5 +1,15 @@
-echo "What is the date and time"
+read -p "What is your time? " time
+read -p "What is your rate? " rate
+read -p "What is your measurement? " measurement
+ 
+function average {
+  echo "average=$(($time + $rate / 2))"
+}
 
-read date
+for n in $time ; do echo "distance= $(($rate * $time))" ; done
 
-echo $date
+if [ $measurement == mph ] ; then echo "measurement= mph" ; 
+elif [ $measurement == kph ] ; then echo "measurement= kph" ;
+else echo "measurement must be mph or kph" ; fi
+
+average

@@ -8,8 +8,8 @@ function average {
 
 for n in $time ; do echo "distance= $(($rate * $time))" ; done
 
-if [ $measurement == mph ] ; then echo "measurement= mph" ; 
-elif [ $measurement == kph ] ; then echo "measurement= kph" ;
-else echo "measurement must be mph or kph" ; fi
+if [ $measurement == mi ] ; then echo "measurement= mi" ; 
+elif [ $measurement == km ] ; then echo "measurement= km" ;
+else echo "measurement must be mi or km" ; fi
 
 average

@@ -1,1 +1,8 @@
-for n in {1..8} ; do echo $n ; done
+#for n in {1..8} ; do echo $n ; done
+
+function what {
+read -p "What is the time? " time
+echo $time
+}
+
+what
